@@ -11,24 +11,24 @@ class L2022211904_9_Test {
      * 4. 功能测试：验证函数的基本功能，确保其逻辑正确性。
      */
 
-    @Test
-    void testPossibleBipartition1() {
-        // 测试目的：验证在给定的 dislikes 下，能否成功将 4 个人分成两组。
-        // 用到的测试用例：n = 4, dislikes = [[1, 2], [1, 3], [2, 4]]
-        Solution9 solution = new Solution9();
-        int n = 4;
-        int[][] dislikes = {{1, 2}, {1, 3}, {2, 4}};
-        assertTrue(solution.possibleBipartition(n, dislikes));
-    }
-
 //    @Test
 //    void testPossibleBipartition1() {
-//        // 故意设置错误的预期结果，让测试失败
+//        // 测试目的：验证在给定的 dislikes 下，能否成功将 4 个人分成两组。
+//        // 用到的测试用例：n = 4, dislikes = [[1, 2], [1, 3], [2, 4]]
 //        Solution9 solution = new Solution9();
 //        int n = 4;
 //        int[][] dislikes = {{1, 2}, {1, 3}, {2, 4}};
-//        assertFalse(solution.possibleBipartition(n, dislikes)); // 原本预期为 assertTrue，现在改为 assertFalse
+//        assertTrue(solution.possibleBipartition(n, dislikes));
 //    }
+
+    @Test
+    void testPossibleBipartition1() {
+        // 故意设置错误的预期结果，让测试失败
+        Solution9 solution = new Solution9();
+        int n = 4;
+        int[][] dislikes = {{1, 2}, {1, 3}, {2, 4}};
+        assertFalse(solution.possibleBipartition(n, dislikes)); // 原本预期为 assertTrue，现在改为 assertFalse
+    }
 
 
     @Test
@@ -51,4 +51,3 @@ class L2022211904_9_Test {
         assertFalse(solution.possibleBipartition(n, dislikes));
     }
 }
-//我的新测试
